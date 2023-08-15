@@ -1,13 +1,16 @@
 #include<stdio.h>
-#include<string.h>
-#include <stdlib.h>
+//#include<string.h>
+//#include <stdlib.h>
+#include <ctype.h>
 
 char reverseString();
-char  concat();
+char concat();
 char stringLength();
 void copyString();
 void isPalindrome();
 void frequency();
+void Vowels_and_consonant(); 	
+void spaces();
 
 main(){
 	int i;
@@ -45,16 +48,16 @@ main(){
 				frequency();
 				break;
 			case 7:
-				reverseString();	
+				Vowels_and_consonant();
 				break;
 			case 8:
-				concat();
+			 	spaces();
 				break;					
-			case 9:
-				exit(0);
-			default:
-				printf("Wrong choice");
-				break;
+			  case 9:
+                exit(0);
+            default:
+                printf("Wrong choice\n");
+                break;
 		}
 	}
 }
@@ -106,6 +109,82 @@ void isPalindrome(){
 	}
 }
 
-void frequency(){
-	
+void frequency() {
+   char input_string[1000];
+   int i;
+    int frequency[256] = {0}; 
+
+    printf("Enter a string: ");
+    fgets(input_string, sizeof(input_string), stdin);
+
+    
+    for (i = 0; input_string[i] != '\0'; i++) {
+        frequency[(unsigned char)input_string[i]]++;
+    }
+
+    
+    printf("Character frequencies in the string:\n");
+    for (i = 0; i < 256; i++) {
+        if (frequency[i] > 0) {
+            printf("'%c': %d\n", (char)i, frequency[i]);
+        }
+    }
+}
+
+void Vowels_and_consonant() {
+	int i;
+    int vowel_count = 0, consonant_count = 0;
+    char str1[100];
+    
+    printf("Enter a string: ");
+    gets(str1);
+    
+    int b = strlen(str1);
+    for (i = 0; i < b; i++) {
+        switch (str1[i]) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+                vowel_count++;
+                break;
+            default:
+                consonant_count++;
+        }
+    }
+    printf("Number of vowels: %d\n", vowel_count);
+    printf("Number of consonants: %d\n", consonant_count);
+}
+
+void spaces() 
+{
+    char input_string[100];
+    int num_blank_spaces = 0, num_digits = 0;
+    int i;
+
+    printf("Enter a string:");
+    fgets(input_string, sizeof(input_string), stdin);
+
+    
+    int len = strlen(input_string);
+    if (len > 0 && input_string[len - 1] == '\n') {
+        input_string[len - 1] = '\0';
+    }
+
+    for (i = 0; input_string[i] != '\0'; i++) {
+        if (isspace(input_string[i])) {
+            num_blank_spaces++;
+        } else if (isdigit(input_string[i])) {
+            num_digits++;
+        }
+    }
+
+    printf("Number of blank spaces: %d\n", num_blank_spaces);
+    printf("Number of digits: %d\n", num_digits);
 }
