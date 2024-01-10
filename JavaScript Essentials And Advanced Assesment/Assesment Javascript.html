@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #bookingForm {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      #bookingForm {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="bookingForm">
+  <h1 style="text-align: center;">Restaurant Booking Form</h1>
+
+  <label for="bookingType">Choice of Booking:</label>
+  <select id="bookingType" onchange="handleBookingType()">
+    <option value="fullDay">Full Day Booking</option>
+    <option value="halfDay">Half Day Booking</option>
+    <option value="hourly">Hourly Booking</option>
+  </select>
+
+  <label for="userName">User Name:</label>
+  <input type="text" id="userName" required>
+
+  <label for="mobileNumber">Mobile Number:</label>
+  <input type="tel" id="mobileNumber" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" required>
+
+  <label for="numberOfPersons">Number of Persons:</label>
+  <input type="number" id="numberOfPersons" required>
+
+  <div id="dateSection" style="display:none;">
+    <label for="date">Date:</label>
+    <input type="date" id="date">
+  </div>
+
+  <div id="timeSlotSection" style="display:none;">
+    <label for="slot">Slot:</label>
+    <select id="slot">
+      <option value="breakfast">Breakfast</option>
+      <option value="lunch">Lunch</option>
+      <option value="dinner">Dinner</option>
+    </select>
+  </div>
+
+  <div id="dateTimeSection" style="display:none;">
+    <label for="dateTime">Date and Time:</label>
+    <input type="datetime-local" id="dateTime">
+  </div>
+
+  <button type="submit">Submit</button>
+</div>
+
+<script>
+  function handleBookingType() {
+    const bookingType = document.getElementById('bookingType').value;
+    const dateSection = document.getElementById('dateSection');
+    const timeSlotSection = document.getElementById('timeSlotSection');
+    const dateTimeSection = document.getElementById('dateTimeSection');
+
+    dateSection.style.display = 'none';
+    timeSlotSection.style.display = 'none';
+    dateTimeSection.style.display = 'none';
+
+    if (bookingType === 'fullDay') {
+      dateSection.style.display = 'block';
+    } else if (bookingType === 'halfDay') {
+      dateSection.style.display = 'block';
+      timeSlotSection.style.display = 'block';
+    } else if (bookingType === 'hourly') {
+      dateSection.style.display = 'block';
+      dateTimeSection.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
