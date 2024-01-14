@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_6</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="hw-100">
+        <h2> Question No.6 </h2>
+        <h2 class="line-height"> Replace Function Expressions with arrow functions in the code below: 
+            <br> Function ask(question, yes, no);
+        </h2>
+
+        <pre> <code>
+                { if (confirm(question))yes(); else
+                no();
+                }
+                ask("Do you agree?", function()
+                { alert("You agreed."); }, function() {
+                alert("You canceled the execution."); }
+                )
+        </code></pre>
+
+        <hr class="hr">
+        <h3 class="text-center">ANSWER</h3>
+
+        <p class="text-center"> <b>Solved with arrow function</b> <br> This function say's "Do you agree?" , <br> if you
+            click on ok then it will be consoder "YES" and show massage "You agreed.",<br> else you click "Cancel" them
+            it will be consoder "NO" and show massage "You canceled the execution."</p>
+    </div>
+
+    <script>
+
+        let yes = confirm("Do you agree?");
+
+        ask = () => {
+            console.log(yes);
+            if (yes == true) {
+                alert("You agreed.");
+            } else {
+                alert("You canceled the execution.");
+            }
+        }
+
+        ask()
+    </script>
+</body>
+
+</html>

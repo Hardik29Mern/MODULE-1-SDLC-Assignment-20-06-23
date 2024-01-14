@@ -1,0 +1,119 @@
+header>h1,
+h2 {
+    text-align: center;
+    
+    /* margin-bottom: 5px; */
+    /* color: rgb(177, 16, 16); */
+}
+.line-height{
+    line-height: 1.5rem;
+    
+}
+
+header>h3 {
+    font-style: italic;
+    text-align: right;
+    /* margin-right: 50px; */
+    /* color: rgb(133, 3, 42); */
+    font-size: 30px;
+}
+
+strong {
+    color: green;
+    font-size: 25px;
+    text-decoration: underline;    
+}
+
+.note{
+    color: red;
+}
+
+
+body {
+    padding: 30px;
+    line-height: 1rem;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right top,
+        rgba(5, 25, 55, 0.9),
+        rgba(0, 77, 122, 0.9),
+        rgba(0, 135, 147, 0.9),
+        rgba(0, 191, 114, 0.9),
+        rgba(168, 235, 18, 0.9)
+      ),
+      url("https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.hr {
+    width: 100%;
+    border: 2px solid black;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+p {
+    font-size: 20px;
+    color: bisque;
+}
+
+b {
+    font-size: 22px;
+    color: bisque;
+}
+
+h4{
+    font-size: 20px;
+    color: brown;
+    font-weight: normal;
+}
+ul>li,p~ol>li {
+    font-size: 20px;
+    color: bisque;
+    font-weight: normal;
+}
+
+
+code{
+    font-size: 1rem;
+}
+
+img {
+    margin-left: 100px;
+    width: 600px;
+    height: 300px;
+}
+
+th,
+td {
+    font-size: larger;
+    padding: 5px;
+    color: black;
+    border: 5px groove rgb(3, 60, 56);
+    background-color: rgba(255, 255, 255, 0.079);
+}
+
+table {
+    border-collapse:collapse;
+    color: bisque;
+
+}
+
+.hw-100{
+    min-height: 77vh;
+    width: 90vw;
+}
+
+.text-center{
+    text-align: center;
+    line-height: 1.5rem;
+    
+}
+    
+
