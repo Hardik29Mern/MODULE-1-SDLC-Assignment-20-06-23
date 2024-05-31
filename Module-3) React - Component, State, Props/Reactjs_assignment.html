@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs Assignment</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-decoration: underline;
+            color: darkgreen;
+
+        }
+
+        .note {
+            font-size: 12px;
+            color: red;
+        }
+
+        h1,
+        h2,
+        .note {
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+
+        .qa-container {
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            background-color: #E0BFB8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .answer {
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            padding: 15px;
+            font-size: 16px;
+            color: #555;
+            margin: 10px;
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        h2 {
+            text-decoration: underline;
+            /* color: darkgreen; */
+            color: #101010;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Module-3) React - Component, State, Props</h1>
+    <h2>Hardik Koshti</h2>
+    <p class="note">Note : Click on questions to view Answer..</p>
+    <hr>
+    <div class="qa-container">
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(1)">Q.1 What is React Js?</div>
+            <div class="answer" id="answer1">
+                <ul>
+                    <li>The React.js framework is an open-source JavaScript framework and library developed by Facebook.
+                        It's used for building interactive user interfaces and web applications quickly and efficiently
+                        with significantly less code than you would with vanilla JavaScript. </li>
+                    <br>
+                    <li> In React, you develop your applications by creating reusable components that you can think of
+                        as independent Lego blocks. These components are individual pieces of a final interface, which,
+                        when assembled, form the application's entire user interface. </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(2)">Q.2 :- What is NPM in React Js?</div>
+            <div class="answer" id="answer2">
+                <ul>
+                    <li>
+                        npm is the world's largest Software Library (Registry)
+                        npm is also a software Package Manager and Installer
+                        The name npm (Node Package Manager) stems from when npm first was created as a package manager
+                        for Node.js.
+                    </li>
+                    <li>
+                        npm is an abbreviation used for the node package manager. It is a package manager for
+                        JavaScript. It is the default package manager that comes with NodeJS when you install it. It
+                        consists of a command-line interface and an online database of public packages and private
+                        packages that are paid which is called the npm Registry.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(3)">Q.3 What is Role of Node Js in react Js?</div>
+            <div class="answer" id="answer3">
+                : There are specific reasons to use the deadly combination of Node.js and React for web app development.
+                Here are a few:
+                <ul>
+                    <li>NodeJS is a framework of JavaScript which is mainly used for working with the
+                        backend of our application or building the backend using JavaScript, whereas ReactJS
+                        is a JavaScript front-end library. It is mainly used for building the user interface</li>
+                    <li> <b> 1. Scalability </b></li>
+                    The combination of Node and React allows developers to build dynamic, large, data-driven web apps
+                    that are responsive across multiple devices. It would help if you had scalability while working on
+                    large projects and maintaining your website’s performance.
+                    <br>
+
+                    <li> <b>2. MERN Stack </b></li>
+                    MERN Stack means MongoDB, Express, React, and Node.js. And no better combo than these frameworks can
+                    provide a unique dimension to a website. You can use Node.js with MERN Stack alongside React.js.
+                    Hence, you can use the Node and React combination for web app development.
+                    <br>
+
+                    <li> <b>3. JSON APIs </b></li>
+                    Creating JSON (JavaScript Object Notation) APIs for web development is competent due to the high
+                    code reusability and access to immediate code sharing in React.js. And Node.js can effectively allow
+                    this.
+                    <br>
+
+                    <li> <b>4. Real-Time Data </b></li>
+                    If your business app handles real-time data management or aims to build a data streaming app, you
+                    should use Node.js as your app requires an ongoing server connection.
+                    <br>
+
+                    <li> <b>5. Fast Development </b></li>
+                    When using the combination of React and Node for web app development, you can receive a high ROI and
+                    save your money and time. After all, these technologies work excellently to offer an effective
+                    platform for building rapid functioning and easy-to-maintain websites.
+                    <br>
+                    <li> <b> 6. SPAs (Single Page Applications) </b></li>
+                    Does your business require a single-page app with asynchronous data loading? Then, you must select
+                    React with Node back-end as it allows building a lightweight back-end model through callback
+                    functions.
+                    <br>
+                    <li> <b> 7. Single Language for Front-end and Back-end </b></li>
+                    With the combination of Node and React, developers don’t require learning complex back-end languages
+                    like Python or Ruby. They can use Node for server-side development and React for front-end code
+                    building without switching between frameworks and programming languages. And it saves resources,
+                    money, and time.
+                    <br>
+                    <li> <b>8. High Server Load</b></li>
+                    The combination of Node.js and React can balance the high server requests and load when developers
+                    work on web app development.
+                    <br>
+                    <li> <b>9. Organized Process</b></li>
+                    The deadly combination of React and Node create an organized web development process. After all,
+                    these technologies are scalable, effective, and fast. When working together, they can help you build
+                    high-functioning websites.
+                    <br>
+                    <li> <b>10. Increased Use of JavaScript</b></li>
+                    Node with React enables the use of the total strength of JavaScript for building front-end and
+                    back-end codes. It gives more freedom and convenience when building websites or web apps, as you can
+                    use one language for every aspect.
+                    <br>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(4)">Q.4 :- What is CLI command In React Js?
+            </div>
+            <div class="answer" id="answer4">
+                <ul>
+                    <li>Command Line Interface</li>
+                    <li>Command Line Interpreter</li>
+                    <li> Command Line Input.</li>
+                    <li> It will be similar to how the create-react-app works in that you can run it using npx or just
+                        install it as a global package.</li>
+
+                    <li>
+                        create-react-app used to generate the boilerplate version of a React application thru command
+                        line. </li>
+                    <li>
+                        create-react-app has taken care of setting up the main structure of the application as well as a
+                        couple of developer settings. Most of what you see will not be visible to the visitor of your
+                        web app. React uses a tool called webpack which transforms the directories and files here into
+                        static assets.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(5)">Q.5 What is Components in React Js?
+            </div>
+            <div class="answer" id="answer5">
+                <ul>
+                    <li>
+                        A Component is one of the core building blocks of React. In other words, we can say that every
+                        application you will develop in React will be made up of pieces called components. Components
+                        make the task of building UIs much easier. You can see a UI broken down into multiple individual
+                        pieces called components and work on them independently and merge them all in a parent component
+                        which will be your final UI.
+                    </li>
+                    <li>
+                        A Component is one of the core building blocks of React. In other words, we can say that every
+                        application you will develop in React will be made up of pieces called components.
+                    </li>
+                    <li>
+                        <b>Two type of component:-</b>
+                    </li>
+                    <li><b>1=> Class Components:-</b> The class components are a little more complex than the functional
+                        components.
+                    </li>
+                    <pre>
+                            class Democomponent extends React.Component
+	                            {
+    	                        render(){
+                                  return <h1>Welcome Message!</h1>; }  }
+	
+	<li> <b>2=> Functional Components:-</b> Functional components are simply javascript functions. We can create a functional component in React by writing a 	javascript function.</li>
+	Ex.
+	const Democomponent=()=>
+	{
+    		return <h1>Welcome Message!</h1>;}
+
+                        </pre>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(6)">Q.6 What is Header and Content Components in React Js?
+            </div>
+            <div class="answer" id="answer6">
+                <ul>
+                    <li>React projects are built with Components. To build web applications with React you need to think
+                        in Components. </li>
+                    <li>React would best be described as a library for creating user interfaces. Think of Components as
+                        the elements of user interfaces. For example, your site might be made up of the following
+                        Components </li>
+                    <li>
+                        App, Header, Logo, NavBar, NavLink, Content, Card, Footer
+                    </li>
+                    <li>
+                        Each of these elements would be separate Components, and you would define a file for each.
+                        Component files are always named after the component they contain: App.jsx, Header.jsx,
+                        Logo.jsx, NavBar.jsx, NavLink.jsx, Content.jsx, Card.jsx, and Footer.jsx.
+                    </li>
+                    <li>
+                        So in header component we put all the code related to header .
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(7)">Q.7 How to install React Js on Windows, Linux Operating
+                System? How to install NPM and How to check version of NPM?</div>
+            <div class="answer" id="answer7">
+                <br>
+                <li> <b> Step 1: </b></li>
+                Install Node.js installer for windows.
+                <br>
+
+                <li> <b> Step 2: </b></li>
+                Open command prompt to check whether it is completely installed or not type the command : node -v
+                If the installation went well it will give you the version you have installed
+                <br>
+                <li> <b> Step 3: </b></li>
+                Now in the terminal run the below command: install -g create-react-app
+                <br>
+                <li> <b> Step 3: </b></li>
+                Now in the terminal run the below command: install -g create-react-app
+                It will globally install react app for you. To check everything went well run the command
+                :create-react-app –version
+                <br>
+                <li> <b> Step 4: </b></li>
+                Now Create a new folder where you want to make your react app using the below command: mkdir newfolder
+                • Move inside the same folder using the below command: cd newfolder (your folder name)
+                <br>
+                <li> <b> Step 5: </b></li>
+                Now inside this folder run the command : create-react-app reactfirst YOUR_APP_NAME
+                <br>
+
+                <li> <b> Step 6: </b></li>
+                Now open the IDE of your choice for eg. Visual studio code and open the folder where you have installed
+                the react app newolder (in the above example) inside the folder you will see your app’s name reactapp
+                (In our example). Use the terminal and move inside your app name folder.Use command cd reactapp (your
+                app name)
+                <br>
+
+                <li> <b> Step 7: </b></li>
+                To start your app run the below command :npm start
+                <br>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(8)">Q.8 How to check version of React Js? </div>
+            <div class="answer" id="answer8">
+               <li> Open the terminal and type this command after installing react app : create-react-app –version</li>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(9)">Q.9 How to change in components of React Js?
+            </div>
+            <div class="answer" id="answer9">
+                <ul>
+                    <li>
+                        To change the state of the React component is useful when you are working on a single page
+                        application, it simply replaces the content of the existing component for the user without
+                        reloading the webpage.
+                    </li>
+                    <li>
+                        We have to set initial state value inside constructor function and set click event handler of
+                        the
+                        element upon which click, results in changing state. Then pass the function to the click handler
+                        and
+                        change the state of the component inside the function using setState. The setState function used
+                        to
+                        change the state of the component directly or with the callback approach as mentioned below.
+                    </li>
+                    <li> Syntax : this.setState({ stateName : new-state-value})</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
