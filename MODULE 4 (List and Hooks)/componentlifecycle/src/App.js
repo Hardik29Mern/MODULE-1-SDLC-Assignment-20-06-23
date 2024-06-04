@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <ClassComponent/>
+      <br/><hr/><hr/><br/>
       <FunctionalComponent/>
     </div>
   );
