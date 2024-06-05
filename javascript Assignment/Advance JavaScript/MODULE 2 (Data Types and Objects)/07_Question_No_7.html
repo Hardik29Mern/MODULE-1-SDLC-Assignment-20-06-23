@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hw-100">
+        <h2>Question No.7 <br><br>
+            Turn the object into JSON and <br><br>
+            back Turn the user into JSON and <br><br>
+            then read it back into another variable. <br><br>
+            user = { name: "John Smith", age: 35};
+        </h2>
+
+        <hr class="hr">
+        <h3 class="text-center">ANSWER</h3>
+
+        <p class="text-center">
+            Convert object in to JSON ==> let userJSON = JSON.stringify(user); <br>
+            Convert back JSON in to user with new variable ==> let newUser = JSON.parse(userJSON); <br>
+            <b>The result is in console, </b> "Please press F12 and goto console".
+        </p>
+
+
+    </div>
+
+    <script>
+
+        let user = { name: "John Smith", age: 35 };
+        console.log("console.log(user);");
+        console.log(user);
+
+        //Convert object in to JSON
+
+        let userJSON = JSON.stringify(user);
+
+        console.log("console.log(userJSON);");
+        console.log(userJSON);
+        //Convert back JSON in to user with new variable
+
+        let newUser = JSON.parse(userJSON);
+
+        console.log("console.log(newUser);");
+        console.log(newUser);
+
+    </script>
+</body>
+
+</html>

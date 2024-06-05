@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="hw-100">
+    <h2>Question No.3 <br><br>
+        Map to names <br><br>
+        let john = { name: "John", age: 25 }; <br><br>
+        let pete = { name: "Pete", age: 30 }; <br><br>
+        let mary = { name: "Mary", age: 28 }; <br><br>
+        let users = [ john, pete, mary ]; <br><br>
+        let names = /* ... your code */ alert( names ); <br><br>
+        // John, Pete, Mary</h2>
+
+        <hr class="hr">
+        <h3 class="text-center">ANSWER</h3>
+        
+        <p class="text-center">  
+                         let names = users.map(({ name }) => name).join(", ");
+
+           </p>
+        <p class="text-center"> alert( names ); is shown on startup </p>
+
+   </div>
+
+<script>
+    let john = {
+                name: "John",
+                age:25
+                };
+    let pete = {
+                name: "Pete",
+                age:30
+                };
+    let mary = {
+                name: "Mary",
+                age:28
+                };
+
+                let users = [john,pete,mary];
+
+                let names = users.map(({ name }) => name).join(", ");
+
+                alert(names);
+</script>
+</body>
+</html>
