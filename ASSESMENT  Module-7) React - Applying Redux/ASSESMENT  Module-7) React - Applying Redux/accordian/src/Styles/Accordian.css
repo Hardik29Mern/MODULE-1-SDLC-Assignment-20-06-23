@@ -1,0 +1,26 @@
+.accordion-item {
+    border: 1px solid #ccc;
+    margin: 30px 20px;
+  }
+  
+  .accordion-title {
+    background: #c4c4c4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: larger;
+    font-weight: 400;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: rgba(40, 40, 42, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+  }
+  
+  .icon {
+    margin-left: 1120px;
+  }
+  
